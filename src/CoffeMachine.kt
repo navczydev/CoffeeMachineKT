@@ -20,6 +20,7 @@ fun main() {
     println(num4)
     read5words()
     flightTripCalculate()
+    printNextFollowingEvenNumber()
 }
 
 fun read5words() {
@@ -37,11 +38,20 @@ fun read5words() {
     // }
 }
 
-fun flightTripCalculate(){
+fun flightTripCalculate() {
     val scanner = Scanner(System.`in`)
     val days = scanner.next().toInt()
     val flighCost = scanner.next().toInt()
     val foodCostPerDay = scanner.next().toInt()
     val oneNightCost = scanner.next().toInt()
-    println(((days * foodCostPerDay) + ((days -1) * oneNightCost)) + (flighCost * 2))
+    println(((days * foodCostPerDay) + ((days - 1) * oneNightCost)) + (flighCost * 2))
 }
+
+fun printNextFollowingEvenNumber() {
+    val scanner = Scanner(System.`in`)
+    val naturalNumber = scanner.nextInt()
+    val nextEvenNum = if (naturalNumber % 2 == 0) naturalNumber + 2 else naturalNumber + 1
+    println(nextEvenNum)
+
+}
+
